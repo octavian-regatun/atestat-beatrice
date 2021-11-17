@@ -1,0 +1,10 @@
+.container {
+  background-color: #fff5ee;
+  height: 100vh;
+}
+
+.customCards {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 100px);
+}

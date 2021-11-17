@@ -1,15 +1,25 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-import styles from "../styles/IndexPage.module.css";
+import { useEffect, useState } from "react";
+import ResponsiveNavbar from "../components/ResponsiveNavbar";
 import Logo1 from "../images/1.png";
 import Logo2 from "../images/2.png";
 import Logo3 from "../images/3.png";
+import styles from "../styles/IndexPage.module.css";
+import getCurrentPage from "../utils/getCurrentPage";
 
 const logoSize: number = 64;
 
 const IndexPage: NextPage = () => {
+  const [currentPage, setCurrentPage] = useState("test");
+
+  useEffect(() => {
+    if (window) {
+      setCurrentPage(getCurrentPage(window));
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +29,7 @@ const IndexPage: NextPage = () => {
         />
       </Head>
       <div className={styles.navbar}>
-        <Navbar />
+        <ResponsiveNavbar currentPage={currentPage} />
       </div>
       <div className={styles.title}>
         <h1>
