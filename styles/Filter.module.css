@@ -1,6 +1,6 @@
 .container{
     height:100px;
-    background-color: #40826D;
+    background-color: #40826D !important;
     display:flex;
     align-items: center;
 }
