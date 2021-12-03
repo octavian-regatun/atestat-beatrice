@@ -5,22 +5,13 @@ import ResponsiveNavbar from "../components/ResponsiveNavbar";
 import { planteDeApartamentData } from "../data/planteDeApartamentData";
 import PlanteDeApartamentData from "../interfaces/planteDeApartamentData";
 import styles from "../styles/PlanteDeApartamentPage.module.css";
+import { checkFiltersActive } from "../utils/filters";
 import getCurrentPage from "../utils/getCurrentPage";
-import { Filters, FiltersKeys, useFilterStore } from "../utils/store";
+import { useFilterStore } from "../utils/store";
 
 export default function PlanteDeApartamentPage() {
   const [currentPage, setCurrentPage] = useState("");
   const filters = useFilterStore(store => store.filters);
-
-  function checkFiltersActive(filters: Filters) {
-    for (const [key, value] of Object.entries(filters)) {
-      if (value) {
-        return true;
-      }
-    }
-
-    return false;
-  }
 
   function renderCustomCards() {
     let planteDeApartamentDataFiltered: PlanteDeApartamentData[];
