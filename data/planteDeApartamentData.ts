@@ -1,4 +1,4 @@
-import PlanteDeApartamentData from "../interfaces/planteDeApartamentData";
+import PlanteDeApartamentData from "../interfaces/planteDeApartamentData.interface";
 
 export const planteDeApartamentData: PlanteDeApartamentData[] = [
   {
@@ -56,4 +56,9 @@ export const planteDeApartamentData: PlanteDeApartamentData[] = [
     imageSrc: "planteDeApartament/ficusElastica.jpg",
     categories: ["petFriendly"],
   },
+  {
+    name: "Hypoestes Phyllostachya",
+    imageSrc: "planteDeApartament/hypoestesPhyllostachya.jpg",
+    categories: ["petFriendly"],
+  }
 ];

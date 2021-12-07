@@ -1,9 +1,7 @@
-import { Card, CardContent, CardMedia, Paper, Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import styles from "../styles/CustomCard.module.css";
-import { checkFiltersActive } from "../utils/filters";
 import { useFilterStore } from "../utils/store";
-import Image from "next/image";
 
 interface Props {
   clickable: boolean;
@@ -11,13 +9,13 @@ interface Props {
   imageSrc: string;
 }
 
+// function clickableStyles(clickable: boolean) {
+//   return clickable ? styles.clickable : "";
+// }
+
 export default function CustomCard({ clickable, name, imageSrc }: Props) {
   const [image, setImage] = useState<typeof import("*.jpg") | null>(null);
   const filters = useFilterStore(store => store.filters);
-
-  function shouldMaxHeight() {
-    return checkFiltersActive(filters) ? styles.maxHeight : "";
-  }
 
   useEffect(() => {
     (async () => {
@@ -26,7 +24,10 @@ export default function CustomCard({ clickable, name, imageSrc }: Props) {
   }, []);
 
   return (
-    <Paper elevation={4} className={styles.container}>
+    <Paper
+      elevation={4}
+      className={`${styles.container}`}
+    >
       {image ? (
         <img className={styles.image} src={image.default.src} alt="plant" />
       ) : null}

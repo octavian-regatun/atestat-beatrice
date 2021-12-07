@@ -3,7 +3,7 @@ import CustomCard from "../components/CustomCard";
 import Filter from "../components/Filter";
 import ResponsiveNavbar from "../components/ResponsiveNavbar";
 import { planteDeApartamentData } from "../data/planteDeApartamentData";
-import PlanteDeApartamentData from "../interfaces/planteDeApartamentData";
+import PlanteDeApartamentData from "../interfaces/planteDeApartamentData.interface";
 import styles from "../styles/PlanteDeApartamentPage.module.css";
 import { checkFiltersActive } from "../utils/filters";
 import getCurrentPage from "../utils/getCurrentPage";
