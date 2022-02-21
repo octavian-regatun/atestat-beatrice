@@ -144,7 +144,7 @@ export default function CategoriiPopoverContent() {
           <Link href="/categorii/yucca">Yucca</Link>
         </div>
         <div>
-          <Link href="/categorii/ficusi">Ficusi</Link>
+          <Link href="/categorii/ficus">Ficusi</Link>
         </div>
         <div>
           <Link href="/categorii/cactusi">Cactusi si succulents</Link>

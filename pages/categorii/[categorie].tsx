@@ -11,6 +11,7 @@ import { conifereData } from "../../data/categorii/conifereData";
 import { cortaderiaData } from "../../data/categorii/cortaderiaData";
 import { ferigiData } from "../../data/categorii/ferigiData";
 import { ficusData } from "../../data/categorii/ficusData";
+import { hortensiiData } from "../../data/categorii/hortensiiData";
 import { pennisetumData } from "../../data/categorii/pennisetumData";
 import { yuccaData } from "../../data/categorii/yuccaData";
 import styles from "../../styles/Categorie.module.css";
@@ -39,6 +40,8 @@ function extractData(categorie: string) {
       return pennisetumData;
     case "yucca":
       return yuccaData;
+    case "hortensii":
+      return hortensiiData;
   }
   return undefined;
 }
