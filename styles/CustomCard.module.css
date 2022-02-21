@@ -7,10 +7,9 @@
   max-width: 250px; */
 }
 
-.container:hover{
+/* .container:hover{
   cursor: pointer;
-  background-color: red;
-}
+} */
 
 .image {
   border-radius: 4px 4px 0px 0px;
@@ -28,6 +27,7 @@
   margin: 8px 0px 8px 8px;
 }
 
-/* .clickable:hover {
+.clickable:hover {
   cursor: pointer;
-} */
+  filter: brightness(0.9);
+}

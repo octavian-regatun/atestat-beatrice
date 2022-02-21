@@ -15,6 +15,7 @@
 }
 
 .container h2 {
+  font-size: 24px;
   transition: 0.2s all;
   cursor: pointer;
 }
@@ -26,4 +27,9 @@
 
 .mobileNavbar {
   background-color: #272727;
+}
+
+.popoverPaper {
+  background-color: #40826D !important;
+  border-radius:1rem !important;
 }

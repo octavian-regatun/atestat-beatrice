@@ -1,9 +1,18 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Button,
+  ButtonBase,
+  Popover,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import styles from "../styles/ResponsiveNavbar.module.css";
 import MenuButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import { useState } from "react";
+import CategoriiPopoverContent from "./CategoriiPopoverContent";
 
 interface ResponsiveNavbarProps {
   currentPage: string;
@@ -31,21 +40,55 @@ interface NavbarProps {
 }
 
 function Navbar({ className, useGradient }: NavbarProps) {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleCategoriiClick = (event: any) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCategoriiClose = () => {
+    setAnchorEl(null);
+  };
+
   function shouldUseGradient() {
     return useGradient ? styles.gradient : "";
   }
 
   return (
     <div className={`${styles.container} ${shouldUseGradient()} ${className}`}>
-      <Link href="/categorii" passHref>
+      <ButtonBase disableRipple={true} onClick={handleCategoriiClick}>
         <h2>Categorii</h2>
-      </Link>
+      </ButtonBase>
       <Link href="/planteDeApartament" passHref>
         <h2>Plante din apartament</h2>
       </Link>
       <Link href="/planteMedicinale" passHref>
         <h2>Plante medicinale</h2>
       </Link>
+      <Popover
+        open={!!anchorEl}
+        anchorEl={anchorEl}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        onClose={handleCategoriiClose}
+        classes={{ paper: styles.popoverPaper }}
+      >
+        <PopoverContent />
+      </Popover>
+    </div>
+  );
+}
+
+function PopoverContent() {
+  return (
+    <div className={styles.popoverContainer}>
+      <CategoriiPopoverContent />
     </div>
   );
 }
