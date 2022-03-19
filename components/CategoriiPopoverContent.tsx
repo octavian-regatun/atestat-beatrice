@@ -15,7 +15,7 @@ function capitalizeFirstLetter(x: string) {
 
 const categorii: categorie[] = [
   { name: "arbori", content: [{ name: "decorativi" }, { name: "exotici" }] },
-  { name: "arbusti" },
+  { name: "arbuști" },
   { name: "conifere" },
   {
     name: "perene",
@@ -31,8 +31,8 @@ const categorii: categorie[] = [
     content: [
       { name: "ferigi" },
       { name: "yucca" },
-      { name: "ficusi" },
-      { name: "cactusi si succulents" },
+      { name: "ficuși" },
+      { name: "cactuși și succulents" },
     ],
   },
 ];
@@ -75,7 +75,7 @@ export default function CategoriiPopoverContent() {
         </div>
       </Popover>
       <div className={styles.categorie}>
-        <Link href="/categorii/arbusti">Arbusti</Link>
+        <Link href="/categorii/arbusti">Arbuști</Link>
       </div>
       <div className={styles.categorie}>
         <Link href="/categorii/conifere">Conifere</Link>
@@ -144,10 +144,10 @@ export default function CategoriiPopoverContent() {
           <Link href="/categorii/yucca">Yucca</Link>
         </div>
         <div>
-          <Link href="/categorii/ficus">Ficusi</Link>
+          <Link href="/categorii/ficus">Ficuși</Link>
         </div>
         <div>
-          <Link href="/categorii/cactusi">Cactusi si succulents</Link>
+          <Link href="/categorii/cactusi">Cactuși și succulents</Link>
         </div>
       </Popover>
     </>

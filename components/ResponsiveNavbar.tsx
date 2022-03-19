@@ -56,6 +56,9 @@ function Navbar({ className, useGradient }: NavbarProps) {
 
   return (
     <div className={`${styles.container} ${shouldUseGradient()} ${className}`}>
+      <Link href="/" passHref>
+        <h2>Acasă</h2>
+      </Link>
       <ButtonBase disableRipple={true} onClick={handleCategoriiClick}>
         <h2>Categorii</h2>
       </ButtonBase>

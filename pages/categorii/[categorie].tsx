@@ -57,7 +57,7 @@ export default function CategorieNextPage() {
       <ResponsiveNavbar currentPage="" useGradient />
       <div className={styles.content}>
         <Grid container>
-          <Grid item xs={6}>
+          <Grid item xs={4}>
             <h1 className={styles.informatii}>Informatii</h1>
             {data?.textArr.map((text) =>
               text.type === "description" ? (
@@ -65,7 +65,7 @@ export default function CategorieNextPage() {
               ) : null
             )}
           </Grid>
-          <Grid item xs={6} className={styles.carouselContainer}>
+          <Grid item xs={8} className={styles.carouselContainer}>
             <Carousel
               className={styles.carousel}
               navButtonsAlwaysVisible

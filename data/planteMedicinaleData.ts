@@ -3,7 +3,11 @@ import PlanteMedicinaleData from "../interfaces/planteMedicinaleData.interface";
 export const planteMedicinaleData: PlanteMedicinaleData[] = [
   {
     name: `Afin`,
-    description: `lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quisquam. Quasi, quisquam. `,
+    description: `Vaccinium myrtillus Crește și se dezvoltă în zona de munte și este ușor de recunoscut
+    datorită dructelor mici de culoare închisă albastru spre negru. Fructele se culeg începând cu
+    sfârșitul lunii iunie până în luna septembrie și se recomandă prin ceai de afine pentru: infecții
+    urinare, gură, enterocolită, tulburări circulatorii periferice, reumatism și afecțiuni
+    dermatologice.`,
     imageSrc: `planteMedicinale/afin.jpg`,
   },
   {
@@ -18,7 +22,12 @@ export const planteMedicinaleData: PlanteMedicinaleData[] = [
   },
   {
     name: `Anghinare`,
-    description: `lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quisquam. Quasi, quisquam. `,
+    description: `Cynara scolymus Planta medicinală care crește pe dealuri și la margini de pădure
+    care înflorește în lunile iunie, iulie și poate fi recoltată de 3-4 ori pe an în lunile mai și iunie.
+    Anghinarea are proprietăți: digestive, diuretice, antimicrobiene, antitoxice, coleretice,
+    energizante, anticolesterolice și acțiune terapeutică în caz de: colecistită, icter, ciroză, hepatită
+    cronică virală, anorexie, enterocolite, insuficiență biliară, hipertensiune arterială reumatism,
+    amețeli, diabet zaharat.`,
     imageSrc: `planteMedicinale/anghinare.jpg`,
   },
   {

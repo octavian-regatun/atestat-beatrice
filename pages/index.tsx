@@ -39,7 +39,14 @@ const IndexPage: NextPage = () => {
         </h1>
       </div>
       <div className={styles.button}>
-        <button>WATCH THE VIDEO</button>
+        <button
+          onClick={() =>
+            (location.href =
+              "https://www.youtube.com/watch?v=LjCzPp-MK48&t=4s&ab_channel=NationalGeographic")
+          }
+        >
+          WATCH THE VIDEO
+        </button>
       </div>
       <div className={styles.logos}>
         <div className={styles.logo}>
